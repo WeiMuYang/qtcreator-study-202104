@@ -1,0 +1,77 @@
+<ui version="4.0" >
+ <class>LayoutDlg</class>
+ <widget class="QDialog" name="LayoutDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>316</width>
+    <height>255</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>布局管理器应用</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QPushButton" name="constraintPushBtn" >
+     <property name="text" >
+      <string>窗口尺寸约束</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QPushButton" name="showPushBtn" >
+     <property name="text" >
+      <string>编辑框现隐</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QPushButton" name="lpolicyPushBtn" >
+     <property name="text" >
+      <string>左编辑框策略</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QPushButton" name="rpolicyPushBtn" >
+     <property name="text" >
+      <string>右编辑框策略</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QPushButton" name="lstretchPushBtn" >
+     <property name="text" >
+      <string>左编辑框伸缩</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QPushButton" name="rstretchPushBtn" >
+     <property name="text" >
+      <string>右编辑框伸缩</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2" >
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>演示</string>
+     </property>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QTextEdit" name="lTextEdit" />
+      </item>
+      <item>
+       <widget class="QTextEdit" name="rTextEdit" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

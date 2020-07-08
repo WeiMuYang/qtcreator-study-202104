@@ -1,0 +1,51 @@
+QFrame {
+   background-color: khaki;
+}
+
+QPushButton {
+    background-color: yellowgreen;
+    border-width: 2px;
+    border-color: seagreen;
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+}
+
+QPushButton:hover {
+   background-color: springgreen;
+}
+
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: palegreen;
+}
+
+QLabel {
+	font:bold;
+	font-family: Á¥Êé;
+	font-size: 16px;
+    color: red;
+    background-color: palevioletred;
+}
+
+QComboBox, QSpinBox {
+    background-color: plum;					/*  °µ×ÏÉ« */
+    selection-color: mediumvioletred;
+    selection-background-color: lightcoral;
+}
+
+QRadioButton:checked {
+	color:deepskyblue;
+}
+
+QRadioButton:hover {
+	color:white;
+    background-color: limegreen;
+}
+
+QGroupBox {
+	border-style:dashed;
+}

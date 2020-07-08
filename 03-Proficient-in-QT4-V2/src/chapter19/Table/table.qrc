@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>table.js</file>
+        <file>table.ui</file>
+    </qresource>
+</RCC>

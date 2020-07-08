@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>texture1.bmp</file>
+        <file>texture2.bmp</file>
+        <file>texture3.bmp</file>
+        <file>texture4.bmp</file>
+        <file>texture5.bmp</file>
+        <file>texture6.bmp</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,176 @@
+<ui version="4.0" >
+ <class>Table</class>
+ <widget class="QWidget" name="Table" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>528</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>表格</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>311</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <row/>
+   <column>
+    <property name="text" >
+     <string>书名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text" >
+     <string>出版社</string>
+    </property>
+   </column>
+   <column>
+    <property name="text" >
+     <string>作者</string>
+    </property>
+   </column>
+   <column>
+    <property name="text" >
+     <string>价格</string>
+    </property>
+   </column>
+   <column/>
+   <column/>
+   <item row="0" column="0" >
+    <property name="text" >
+     <string>OpenGL编程指南</string>
+    </property>
+   </item>
+   <item row="0" column="1" >
+    <property name="text" >
+     <string>机械工业出版社</string>
+    </property>
+   </item>
+   <item row="0" column="2" >
+    <property name="text" >
+     <string>Dave Shreiner</string>
+    </property>
+   </item>
+   <item row="0" column="3" >
+    <property name="text" >
+     <string>69.00</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="btnClear" >
+   <property name="geometry" >
+    <rect>
+     <x>390</x>
+     <y>60</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>&amp;Clear</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnInsRow" >
+   <property name="geometry" >
+    <rect>
+     <x>410</x>
+     <y>130</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>InsertRow</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnInsCol" >
+   <property name="geometry" >
+    <rect>
+     <x>410</x>
+     <y>180</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Insert Column</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinInsRow" >
+   <property name="geometry" >
+    <rect>
+     <x>350</x>
+     <y>130</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinInsCol" >
+   <property name="geometry" >
+    <rect>
+     <x>350</x>
+     <y>180</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDelRow" >
+   <property name="geometry" >
+    <rect>
+     <x>410</x>
+     <y>230</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Delete Row</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinDelRow" >
+   <property name="geometry" >
+    <rect>
+     <x>350</x>
+     <y>230</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinDelCol" >
+   <property name="geometry" >
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDelCol" >
+   <property name="geometry" >
+    <rect>
+     <x>410</x>
+     <y>280</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Delete Column</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

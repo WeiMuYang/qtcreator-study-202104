@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/line.png</file>
+    <file>images/polyline.png</file>
+    <file>images/rectangle.png</file>
+    <file>images/polygon.png</file>
+    <file>images/arc.png</file>
+    <file>images/pie.png</file>
+    <file>images/chord.png</file>
+    <file>images/ellipse.png</file>
+    <file>images/text.png</file>
+</qresource>
+</RCC>

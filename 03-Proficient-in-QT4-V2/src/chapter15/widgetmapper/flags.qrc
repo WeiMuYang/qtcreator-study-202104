@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/china.png</file>
+    <file>images/france.png</file>
+    <file>images/germany.png</file>
+    <file>images/italy.png</file>
+    <file>images/japan.png</file>
+    <file>images/korea.png</file>
+    <file>images/uk.png</file>
+    <file>images/usa.png</file>
+</qresource>
+</RCC>

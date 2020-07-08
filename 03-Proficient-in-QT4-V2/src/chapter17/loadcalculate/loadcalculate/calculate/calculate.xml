@@ -1,0 +1,33 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node name="org/freedesktop/Qt/Calculate">
+  <interface name="org.freedesktop.Qt.CalculateInterface">
+    <method name="payPerMonth">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="totalMonths">
+      <arg type="i" direction="out"/>
+    </method>
+    <method name="initPay">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="totalInterest">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="totalPay">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="lead">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="housePrice">
+      <arg type="d" direction="out"/>
+    </method>
+    <method name="initInput">
+      <arg name="price" type="d" direction="in"/>
+      <arg name="area" type="d" direction="in"/>
+      <arg name="percent" type="i" direction="in"/>
+      <arg name="interest" type="d" direction="in"/>
+      <arg name="year" type="i" direction="in"/>
+    </method>
+  </interface>
+</node>

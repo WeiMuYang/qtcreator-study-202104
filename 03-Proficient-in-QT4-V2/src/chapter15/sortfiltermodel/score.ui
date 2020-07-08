@@ -1,0 +1,155 @@
+<ui version="4.0" >
+ <class>score</class>
+ <widget class="QWidget" name="score" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>573</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>排序过滤</string>
+  </property>
+  <widget class="QTableView" name="tableView" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>541</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="sortingEnabled" >
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>168</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>过滤</string>
+   </property>
+   <layout class="QGridLayout" >
+    <item row="0" column="0" >
+     <widget class="QLabel" name="label" >
+      <property name="text" >
+       <string>语文</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" >
+     <widget class="QSpinBox" name="spinChineseFrom" >
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" >
+     <widget class="QLabel" name="label_4" >
+      <property name="text" >
+       <string>至</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3" >
+     <widget class="QSpinBox" name="spinChineseTo" >
+      <property name="minimum" >
+       <number>0</number>
+      </property>
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+      <property name="value" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" >
+     <widget class="QLabel" name="label_2" >
+      <property name="text" >
+       <string>数学</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" >
+     <widget class="QSpinBox" name="spinMathFrom" >
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" >
+     <widget class="QLabel" name="label_9" >
+      <property name="text" >
+       <string>至</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" >
+     <widget class="QSpinBox" name="spinMathTo" >
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+      <property name="value" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" >
+     <widget class="QLabel" name="label_3" >
+      <property name="text" >
+       <string>英语</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" >
+     <widget class="QSpinBox" name="spinEnglishFrom" >
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" >
+     <widget class="QLabel" name="label_10" >
+      <property name="text" >
+       <string>至</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3" >
+     <widget class="QSpinBox" name="spinEnglishTo" >
+      <property name="maximum" >
+       <number>100</number>
+      </property>
+      <property name="value" >
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btnFilter" >
+   <property name="geometry" >
+    <rect>
+     <x>340</x>
+     <y>430</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>过滤</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

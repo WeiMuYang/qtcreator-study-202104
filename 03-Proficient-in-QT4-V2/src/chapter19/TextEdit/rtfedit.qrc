@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>rtfedit.js</file>
+        <file>rtfedit.ui</file>
+    </qresource>
+</RCC>

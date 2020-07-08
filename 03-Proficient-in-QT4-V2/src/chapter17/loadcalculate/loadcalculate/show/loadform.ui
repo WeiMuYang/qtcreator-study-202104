@@ -1,0 +1,703 @@
+<ui version="4.0" >
+ <class>ShowWidget</class>
+ <widget class="QWidget" name="ShowWidget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>562</width>
+    <height>405</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy>
+    <hsizetype>5</hsizetype>
+    <vsizetype>5</vsizetype>
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>住房贷款计算</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="0" column="0" >
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>信息录入</string>
+     </property>
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="4" column="4" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="label_3" >
+          <property name="text" >
+           <string>面积：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" >
+         <widget class="QLabel" name="label_4" >
+          <property name="text" >
+           <string> 平方米</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QLabel" name="label" >
+          <property name="text" >
+           <string>单价:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4" >
+         <widget class="QLabel" name="label_6" >
+          <property name="text" >
+           <string>成     </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4" >
+         <widget class="QLabel" name="label_2" >
+          <property name="text" >
+           <string>元/平米</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3" >
+         <widget class="QLineEdit" name="priceEdit" >
+          <property name="text" >
+           <string>5000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3" >
+         <widget class="QLineEdit" name="areaEdit" >
+          <property name="text" >
+           <string>100</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3" >
+         <widget class="QLineEdit" name="interestEdit" >
+          <property name="text" >
+           <string>7.11</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4" >
+         <widget class="QLabel" name="label_16" >
+          <property name="text" >
+           <string>年       </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>21</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0" colspan="2" >
+         <widget class="QLabel" name="label_15" >
+          <property name="text" >
+           <string>贷款年限：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>21</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="0" colspan="2" >
+         <widget class="QLabel" name="label_7" >
+          <property name="text" >
+           <string>年利率：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3" >
+         <widget class="QLabel" name="label_5" >
+          <property name="text" >
+           <string>按揭成数：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3" >
+         <widget class="QLineEdit" name="percentEdit" >
+          <property name="text" >
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3" >
+         <widget class="QLineEdit" name="yearEdit" >
+          <property name="text" >
+           <string>10</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>16</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QGroupBox" name="groupBox_2" >
+     <property name="title" >
+      <string>计算结果</string>
+     </property>
+     <layout class="QHBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="6" column="0" >
+         <widget class="QLabel" name="label_14" >
+          <property name="text" >
+           <string>月均还款：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" >
+         <widget class="QLineEdit" name="totalInterestEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" >
+         <widget class="QLineEdit" name="totalMonthsEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" >
+         <widget class="QLineEdit" name="initPayEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QLineEdit" name="housePriceEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" >
+         <widget class="QLabel" name="label_11" >
+          <property name="text" >
+           <string>支付利息总额：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="label_9" >
+          <property name="text" >
+           <string>贷款总额：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" >
+         <widget class="QLabel" name="label_13" >
+          <property name="text" >
+           <string>贷款期数：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" >
+         <widget class="QLineEdit" name="payEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QLineEdit" name="totalPayEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLineEdit" name="leadEdit" >
+          <property name="enabled" >
+           <bool>true</bool>
+          </property>
+          <property name="palette" >
+           <palette>
+            <active>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>0</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text" >
+              <brush brushstyle="SolidPattern" >
+               <color alpha="255" >
+                <red>119</red>
+                <green>119</green>
+                <blue>115</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="label_8" >
+          <property name="text" >
+           <string>房款总额：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="label_10" >
+          <property name="text" >
+           <string>还款总额：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" >
+         <widget class="QLabel" name="label_12" >
+          <property name="text" >
+           <string>首期付款：</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2" >
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="submitButton" >
+       <property name="text" >
+        <string>开始计算</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="revertButton" >
+       <property name="text" >
+        <string>重新输入</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exitButton" >
+       <property name="text" >
+        <string>退出</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>priceEdit</tabstop>
+  <tabstop>areaEdit</tabstop>
+  <tabstop>percentEdit</tabstop>
+  <tabstop>yearEdit</tabstop>
+  <tabstop>interestEdit</tabstop>
+  <tabstop>housePriceEdit</tabstop>
+  <tabstop>leadEdit</tabstop>
+  <tabstop>totalPayEdit</tabstop>
+  <tabstop>totalInterestEdit</tabstop>
+  <tabstop>initPayEdit</tabstop>
+  <tabstop>totalMonthsEdit</tabstop>
+  <tabstop>payEdit</tabstop>
+  <tabstop>submitButton</tabstop>
+  <tabstop>revertButton</tabstop>
+  <tabstop>exitButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ShowWidget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>529</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>502</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

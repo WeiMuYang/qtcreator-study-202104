@@ -1,0 +1,81 @@
+body
+{
+  background-color: #ffffff;
+}
+
+P, table, td, tr, ul, body
+{
+  font-family: ËÎÌו,Arial;
+  font-size: 9pt;
+  color: #000000;
+  line-height: 140%;
+}
+
+.img 
+{
+	border: 1px solid #000000;
+}
+
+tdline
+{
+  BORDER-RIGHT: #cccccc 1px solid; 
+  BORDER-LEFT: #cccccc 1px solid; 
+  BORDER-BOTTOM: #cccccc 1px solid
+}
+a:link
+{
+  text-decoration: none;
+  color: #000000;
+}
+
+a:visited
+{
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover
+{
+  text-decoration: underline;
+  color: #000000;
+}
+
+.a1
+{
+  font-family: "ËÎÌו" , "Arial";
+  font-size: 9pt;
+  line-height: 140%;
+}
+
+.a2
+{
+  font-family: "ËÎÌו" , "Arial";
+  font-size: 9pt;
+  line-height: 180%;
+}
+.baseline
+{
+  border-top: 1pt none #000000;
+  border-right: 1pt solid #000000;
+  border-bottom: 1pt none #000000;
+  border-left: 1pt dashed #000000;
+}
+.bord
+{
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #FF0000;
+  border-right-color: #990000;
+  border-bottom-color: #990000;
+  border-left-color: #FF0000;
+}
+.13
+{
+  font-size: 14.5px;
+}

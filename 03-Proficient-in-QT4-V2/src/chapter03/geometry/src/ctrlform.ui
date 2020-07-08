@@ -1,0 +1,295 @@
+<ui version="4.0" >
+ <class>CtrlForm</class>
+ <widget class="QWidget" name="CtrlForm" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>629</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>窗口标志和几何布局</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QGroupBox" name="groupBox" >
+       <property name="title" >
+        <string>窗口类型</string>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <widget class="QRadioButton" name="widgetRadioBtn" >
+          <property name="text" >
+           <string>Widget</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QRadioButton" name="sheetRadioBtn" >
+          <property name="text" >
+           <string>Sheet</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" >
+         <widget class="QRadioButton" name="toolRadioBtn" >
+          <property name="text" >
+           <string>Tool</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3" >
+         <widget class="QRadioButton" name="subwindowRadioBtn" >
+          <property name="text" >
+           <string>SubWindow</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QRadioButton" name="windowRadioBtn" >
+          <property name="text" >
+           <string>Window</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QRadioButton" name="drawerRadioBtn" >
+          <property name="text" >
+           <string>Drawer</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" >
+         <widget class="QRadioButton" name="tooltipRadioBtn" >
+          <property name="text" >
+           <string>ToolTip</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QRadioButton" name="dialogRadioBtn" >
+          <property name="text" >
+           <string>Dialog</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QRadioButton" name="popupRadioBtn" >
+          <property name="text" >
+           <string>Popup</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" >
+         <widget class="QRadioButton" name="splashscreenRadioBtn" >
+          <property name="text" >
+           <string>SplashScreen</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" >
+       <item>
+        <widget class="QGroupBox" name="groupBox_2" >
+         <property name="title" >
+          <string>父窗口部件</string>
+         </property>
+         <layout class="QHBoxLayout" >
+          <property name="topMargin" >
+           <number>5</number>
+          </property>
+          <property name="bottomMargin" >
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QRadioButton" name="nullRadioBtn" >
+            <property name="text" >
+             <string>无父窗口</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="thisRadioBtn" >
+            <property name="text" >
+             <string>本窗口</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3" >
+         <property name="title" >
+          <string>移动</string>
+         </property>
+         <layout class="QHBoxLayout" >
+          <property name="topMargin" >
+           <number>2</number>
+          </property>
+          <property name="bottomMargin" >
+           <number>5</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" >
+            <item>
+             <widget class="QLabel" name="label" >
+              <property name="text" >
+               <string>X：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="xSpinBox" />
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType" >
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" >
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" >
+            <item>
+             <widget class="QLabel" name="label_2" >
+              <property name="text" >
+               <string>Y：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ySpinBox" />
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4" >
+     <property name="title" >
+      <string>窗口提示</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QCheckBox" name="fsdialogCheckBox" >
+        <property name="text" >
+         <string>MSWindowsFixedSizeDialogHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QCheckBox" name="titleCheckBox" >
+        <property name="text" >
+         <string>WindowTitleHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" >
+       <widget class="QCheckBox" name="helpCheckBox" >
+        <property name="text" >
+         <string>WindowContextHelpButtonHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QCheckBox" name="owndcCheckBox" >
+        <property name="text" >
+         <string>MSWindowsOwnDC</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QCheckBox" name="menuCheckBox" >
+        <property name="text" >
+         <string>WindowSystemMenuHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" >
+       <widget class="QCheckBox" name="shadeCheckBox" >
+        <property name="text" >
+         <string>WindowShadeButtonHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QCheckBox" name="managerCheckBox" >
+        <property name="text" >
+         <string>X11BypassWindowMagagerHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QCheckBox" name="minCheckBox" >
+        <property name="text" >
+         <string>WindowMinimizeButtonHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" >
+       <widget class="QCheckBox" name="topCheckBox" >
+        <property name="text" >
+         <string>WindowStaysOnTopHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QCheckBox" name="framelessCheckBox" >
+        <property name="text" >
+         <string>FramelessWindowHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" >
+       <widget class="QCheckBox" name="maxCheckBox" >
+        <property name="text" >
+         <string>WindowMaximizeButtonHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" >
+       <widget class="QCheckBox" name="customizeCheckBox" >
+        <property name="text" >
+         <string>CustomizeWindowHint</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" >
+       <widget class="QCheckBox" name="minmaxCheckBox" >
+        <property name="text" >
+         <string>WindowMinMaxButtonsHint</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

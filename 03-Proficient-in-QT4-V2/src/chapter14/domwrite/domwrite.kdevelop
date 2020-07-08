@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<kdevelop>
+    <general>
+        <author>zeki</author>
+        <email>caizhiming@tom.com</email>
+        <version>$VERSION</version>
+        <projectmanagement>KdevTrollProject</projectmanagement>
+        <primarylanguage>C++</primarylanguage>
+        <keywords>
+            <keyword>C++</keyword>
+        </keywords>
+        <projectname>domwrite</projectname>
+        <ignoreparts/>
+        <projectdirectory>.</projectdirectory>
+        <absoluteprojectpath>false</absoluteprojectpath>
+        <description/>
+        <defaultencoding/>
+    </general>
+    <kdevfileview>
+        <groups>
+            <group pattern="*.cpp;*.cxx;*.h" name="Sources" />
+        </groups>
+    </kdevfileview>
+</kdevelop>

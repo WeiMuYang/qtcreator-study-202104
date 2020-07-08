@@ -1,0 +1,248 @@
+<ui version="4.0" >
+ <class>test</class>
+ <widget class="QWidget" name="test" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>636</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>交规模拟考试</string>
+  </property>
+  <widget class="QFrame" name="frame" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>621</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="frameShape" >
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow" >
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="lblTotal" >
+    <property name="geometry" >
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>考试时间45分钟</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNext" >
+    <property name="geometry" >
+     <rect>
+      <x>270</x>
+      <y>410</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>下一题</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox" >
+    <property name="geometry" >
+     <rect>
+      <x>80</x>
+      <y>410</y>
+      <width>46</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum" >
+     <number>1</number>
+    </property>
+    <property name="maximum" >
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQuestion" >
+    <property name="geometry" >
+     <rect>
+      <x>60</x>
+      <y>120</y>
+      <width>501</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy" >
+     <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text" >
+     <string>1:如图所示的交通警察指挥手势是示意交通违法行为车辆( ) 。</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGoto" >
+    <property name="geometry" >
+     <rect>
+      <x>150</x>
+      <y>410</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>到指定题号</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox" >
+    <property name="geometry" >
+     <rect>
+      <x>340</x>
+      <y>170</y>
+      <width>211</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title" >
+     <string>选项</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget" >
+     <property name="geometry" >
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>171</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QRadioButton" name="radioA" >
+        <property name="text" >
+         <string>A.靠边停车</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioB" >
+        <property name="text" >
+         <string>B.直行</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioC" >
+        <property name="text" >
+         <string>C.右转弯</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioD" >
+        <property name="text" >
+         <string>D.左转弯</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnPrev" >
+    <property name="geometry" >
+     <rect>
+      <x>380</x>
+      <y>410</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>上一题</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblRemain" >
+    <property name="geometry" >
+     <rect>
+      <x>380</x>
+      <y>70</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>剩余时间45分钟</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4" >
+    <property name="geometry" >
+     <rect>
+      <x>70</x>
+      <y>190</y>
+      <width>234</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string/>
+    </property>
+    <property name="pixmap" >
+     <pixmap resource="test.qrc" >:/images/cop.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCommit" >
+    <property name="geometry" >
+     <rect>
+      <x>490</x>
+      <y>410</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>交卷</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox" >
+    <property name="geometry" >
+     <rect>
+      <x>450</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text" >
+      <string>无样式</string>
+     </property>
+    </item>
+    <item>
+     <property name="text" >
+      <string>css1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text" >
+      <string>css2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text" >
+      <string>css3</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="test.qrc" />
+ </resources>
+ <connections/>
+</ui>

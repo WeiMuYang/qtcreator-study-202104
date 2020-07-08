@@ -1,0 +1,10 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+    <file>images/pen.png</file>
+    <file>images/pencapstyle.png</file>
+    <file>images/penjoinstyle.png</file>
+    <file>images/brush.png</file>
+    <file>images/gradient.png</file>
+</qresource>
+</RCC>
