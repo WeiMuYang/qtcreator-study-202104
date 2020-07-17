@@ -1,25 +1,22 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2011-03-27T10:40:29
+# Project created by QtCreator 2020-07-15T15:01:06
 #
 #-------------------------------------------------
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4):QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
-TARGET = myMdi
+TARGET = test1188
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mdichild.cpp
+    hled.cpp
 
 HEADERS  += mainwindow.h \
-    mdichild.h
+    hled.h
 
 FORMS    += mainwindow.ui
-
-RESOURCES += \
-    myImage.qrc

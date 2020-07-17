@@ -24,7 +24,7 @@ void MdiChild::newFile() // 新建文件操作
     isUntitled = true; // 新建的文档没有被保存过
 
     // 将当前文件命名为未命名文档加编号，编号先使用再加1
-    curFile = tr("未命名文档%1.txt").arg(sequenceNumber++);
+    curFile = QObject::tr("未命名文档%1.txt").arg(sequenceNumber++);
 
 
     // 设置窗口标题，使用[*]可以在文档被更改后在文件名称后显示”*“号
@@ -98,7 +98,7 @@ bool MdiChild::save() // 保存操作
 bool MdiChild::saveAs() // 另存为操作
 {
     // 获取文件路径，如果为空，则返回false
-    QString fileName = QFileDialog::getSaveFileName(this, tr("另存为"),curFile);
+    QString fileName = QFileDialog::getSaveFileName(this, QObject::tr("另存为"),curFile);
     if (fileName.isEmpty())
         return false;
 

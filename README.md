@@ -5,7 +5,7 @@
 - [示例代码](./01-Qt-creator-quick-start/src)  
 
 ## [2 Qt及Quick开发实战](./02-Qt-quick-develop-practice)  
-- [Qt及Quick开发实战-PDF](./02-Qt-quick-develop-practice/Qt及Quick开发实战.pdf)     
+- [Qt及Quick开发实战-PDF](./02-Qt-quick-develop-practice/Qt及Quick开发实战-big.pdf)     
 - [工程文件](./02-Qt-quick-develop-practice/QtWidAppDemo/QtWidAppDemo.pro)   
 - [示例代码](./02-Qt-quick-develop-practice/src)   
 

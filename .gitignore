@@ -25,6 +25,11 @@ Makefile*
 *.rar
 *.7z
 
+# 未完成 not finished
+*-nf.*
+
+
+
 
 # 一些目录
 
