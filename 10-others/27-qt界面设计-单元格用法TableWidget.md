@@ -70,6 +70,11 @@ ui->tableWidget->setItem(0, 1, new QTableWidgetItem(QString::number(200))); // �
 
 - 表格的大小和单元格的大小算完后，需要加上大约3px的线宽才比较好看    
 
+- 可以设置行数和列数    
+
+![27-5](./img/27-5.png)   
+
+- 可以通过加空格的方式，修改标头的宽度   
 
 ## 参考资料   
 1. https://www.cnblogs.com/aiguona/p/10400111.html   

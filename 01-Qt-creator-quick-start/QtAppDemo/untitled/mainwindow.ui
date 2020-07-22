@@ -20,7 +20,7 @@
       <x>230</x>
       <y>110</y>
       <width>631</width>
-      <height>401</height>
+      <height>101</height>
      </rect>
     </property>
     <widget class="QListView" name="listView">
@@ -59,6 +59,16 @@
       <string>PushButton</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>510</y>
+      <width>241</width>
+      <height>161</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
