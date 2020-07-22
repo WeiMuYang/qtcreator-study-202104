@@ -1,7 +1,8 @@
 # TableWidget单元格用法   
 
 ## 1 表格的设置   
-- 详见参考资料   
+- 修改单元格的背景：`table->item(0,0)->setBackground(QColor(233, 233, 241));`        
+- 修改text时，有表头和无表头方法不一样    
 
 ## 2 表格填数据   
 ```C++
@@ -45,7 +46,8 @@ ui->tableWidget->setItem(3, 3, new QTableWidgetItem("P_I_H"));//
 ui->tableWidget->setItem(4, 3, new QTableWidgetItem("P_T"));//
 ui->tableWidget->setItem(5, 3, new QTableWidgetItem("P_S"));//
 ui->tableWidget->setItem(6, 3, new QTableWidgetItem("P_N"));//
-ui->tableWidget->setItem(7, 3, new QTableWidgetItem("P_I"));////每一项的厚度值
+//每一项的厚度值
+ui->tableWidget->setItem(7, 3, new QTableWidgetItem("P_I"));//
 ui->tableWidget->setItem(0, 1, new QTableWidgetItem(QString::number(200))); // 插入数字  
 
 ```
@@ -53,6 +55,20 @@ ui->tableWidget->setItem(0, 1, new QTableWidgetItem(QString::number(200))); // �
 ## 3 运行效果   
 
 ![27-1](./img/27-1.png)   
+
+
+## 4 注意事项   
+- 对于tableWidget最好把表头去掉，方便调格式    
+![27-2](./img/27-2.png)  
+
+- 当没有表头时，可以用setText方法改单元格的值`item(0,0)->setText("作战模式");`，但是有表头的话，只能用setItem方法修改`tableWidget->setItem(7, 3, new QTableWidgetItem("P_I"))`    
+- 可以去掉滑动框    
+![27-3](./img/27-3.png)  
+
+- 可以设置最后行或者最后一列自适应到表格大小    
+![27-4](./img/27-4.png)    
+
+- 表格的大小和单元格的大小算完后，需要加上大约3px的线宽才比较好看    
 
 
 ## 参考资料   
