@@ -1,23 +1,20 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-06-13T17:50:35
+# Project created by QtCreator 2020-07-26T13:37:47
 #
 #-------------------------------------------------
 
 QT       += core gui
-CONFIG += thread
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = MyThread
+TARGET = 46-MyLineEdit
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
-    dialog.cpp \
-    workthread.cpp
+SOURCES += main.cpp\
+        widget.cpp
 
-HEADERS  += dialog.h \
-    workthread.h
+HEADERS  += widget.h
 
-FORMS    +=
+FORMS    += widget.ui
