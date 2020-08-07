@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-07-14T21:07:38
+# Project created by QtCreator 2020-08-07T20:37:07
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = testback
+TARGET = 27-TableWidget-test
 TEMPLATE = app
 
 

@@ -2,10 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-#include <QJsonObject>
-#include <QJsonDocument>
-
+#include <QDebug>
+#include <QDateTime>
+#include <json/json.h>
 
 namespace Ui {
 class MainWindow;
@@ -19,12 +18,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QJsonObject m_JsonData;
-    QJsonObject m_CS;
-    QJsonObject m_CCS;
-    void CreateJson();
-    QJsonDocument m_document;
+private slots:
+    void on_btnParseJson_clicked();
 
+    void on_btnBuildJson_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -16,9 +16,9 @@ void ProcessJson::ChangeToBytes(int i)
     if(i == 0)
         createJson0();
     QString jsonout ;
+
 //  方法1. 从Json::Value转 QString  再转 QByteArray
     jsonout = m_RootJsonArr[0].toStyledString().c_str();
-
 
 //   方法2.从 Json::FastWriter  转 QString  再转 QByteArray
 //    Json::FastWriter fw;
@@ -107,8 +107,6 @@ void ProcessJson::AnalysisJsonByQJson()
 
     QJsonArray json_array2 = QJsonDocument::fromJson(m_JsonBytes[0]).array();
     int tag = json_array2.at(0).toInt();
-
-
 
 
 
