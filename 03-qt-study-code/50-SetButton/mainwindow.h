@@ -15,9 +15,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void TableWidgetClear();
-    void InitTableWidget();
-    void CreateItem();
+private slots:
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
