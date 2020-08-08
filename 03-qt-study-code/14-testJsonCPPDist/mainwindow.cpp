@@ -10,35 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ProcessJson Pro;
 
-
-
-    m_UDPSocketSending = new QUdpSocket();
-    m_JsonProcess = new ProcessJson();
-
-    SendUDPString(0);
-
-
-//    Json::Value root;
-//    Json::Value arrayObj;
-//    Json::Value item;
-
-
-//    item["uid"]=Json::Value("http://www.cnblogs.com/chechen/");
-//    item["fileName"]=Json::Value("mzixi.txt");
-//    item["time"]=Json::Value("2017.07.28 10:55:22");
-//    item["type"]=Json::Value("Libcurl HTTP POST JSON");
-//    item["authList"]=Json::Value("weidong0925@126.com");
-//    arrayObj.append(item);
-
-
-//    root  = arrayObj;
-
-//    QString jsonout = root.toStyledString().c_str();
-//    QString jsonout1 = item.toStyledString().c_str();
-
-//    qDebug().noquote() << jsonout ;
-//    qDebug().noquote() << jsonout1 ;
 
 }
 
@@ -47,20 +20,58 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::closeEvent(QCloseEvent *event)
+/*  Json 格式如下，解析过程，详见 processjson.cpp
 {
-    QString ip = "192.168.1.101";
-    quint16 port = 8000;
-    QString str = "close window";
-    QByteArray byte = str.toLatin1();
-    m_JsonProcess->ChangeToBytes(0);
-    m_UDPSocketSending->writeDatagram(byte, (QHostAddress)ip, port);
+    "type":"nozt",
+    "sbdw":"A01B01C01D01E01F12",
+    "status": {
+        "deStatus" : {
+            "mmjk" : {
+                "code" : "00001",
+                "fsd" : 0,
+                "sdsj" : 0,
+                "status" : 1,
+                "type" : 1,
+                "tzy" : 0,
+                "updatetime" : "2020-07-15 21:37:17"
+            }
+        },
+        "lockStatus" : {
+            "byby" : {
+                "code" : "02001",
+                "mode" : 0,
+                "resultsqjg" : 0,
+                "resultzxjg" : 0,
+                "type" : 2,
+                "updatetime" : "2020-07-15 21:37:17"
+            },
+            "ddhh" : {
+                "code" : "04001",
+                "kxtd" : 0,
+                "mode" : 0,
+                "resultsqjg" : 0,
+                "resultzxjg" : 0,
+                "type" : 4,
+                "updatetime" : "2020-07-15 21:37:17"
+            },
+            "djmb" : {
+                "code" : "01001",
+                "resultdjmb" : -1,
+                "type" : 1,
+                "updatetime" : "2020-07-15 21:37:17"
+            }
+        },
+        "westatus" : {
+            "bdnm" : "A01B01C01D01E01F12",
+            "weType" : 3,
+            "zbzt" : 1
+        }
+    }
 }
+*/
 
-void MainWindow::SendUDPString(int i)
-{
-    QString ip = "192.168.1.101";
-    quint16 port = 8000;
-    m_JsonProcess->ChangeToBytes(0);
-    m_UDPSocketSending->writeDatagram(m_JsonProcess->m_JsonBytes[i], (QHostAddress)ip, port);
-}
+
+
+
+
+

@@ -12,14 +12,14 @@ class ProcessJson
 public:
     ProcessJson();
 
-    Json::Value m_RootJsonArr[30];
-    QByteArray m_JsonBytes[30];
+    QString m_JsonOfQString;
 
-    void ChangeToBytes(int i);
+    Json::Value m_RootJson;
 
-    void createJson0();
+    void AnalysisJsonByJsonCpp();
 
-    void AnalysisJsonByQJson();
+    void ChangeToBytes();
+    void createJson();
 
 };
 
