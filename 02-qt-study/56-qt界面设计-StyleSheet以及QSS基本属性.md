@@ -3,6 +3,29 @@
 [toc]
 
 - [主要参考](https://www.cnblogs.com/bclshuai/p/9809679.html)   
+- 对于Pushbutton相关的控件， 要想使背景色生效，必须要设置一下某个border属性，border-color、border-width等等任何一个跟border相关的属性都行。因为pushbutton的原生边界把背景色给覆盖住了。   
+- 在设置某个控件时，可以先搜一下，该控件有哪些QSS属性可以设置   
+
+- 常用的设置模板   
+
+```CSS
+#combobox{     
+    background-color: rgb(54, 98, 180);    	/*  背景色   */
+	border:2px solid #00ffff; 				/*  边框设置  */
+    	/* border必须有， background-color才能生效  */
+	color:#ffffff;                      	/*  字体颜色  */  
+    font-size: 12px;                     	/*  字体大小 */ 
+    font-family: 微软雅黑;					 /*  字体 */ 
+    padding:1px 1px 1px 3px;           	    /*  内边框：上右下左  */
+	border-radius:10px;               		/*  四个角的弧度半径  */
+    border-style: flat;						/*  扁平化  */
+    text-align:center                       /*  对齐方式： left，right，center  */
+} 
+
+
+```
+
+
 
 ### 1 常用属性  
 ### 1.1 背景属性  

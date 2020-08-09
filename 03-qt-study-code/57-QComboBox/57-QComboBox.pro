@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-08-08T19:22:09
+# Project created by QtCreator 2020-08-08T20:26:48
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = 56-SetStyleSheet
+TARGET = 57-QComboBox
 TEMPLATE = app
 
 
@@ -21,10 +21,3 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     img.qrc
-
-DISTFILES += \
-    img/arrow.png \
-    img/bugle.png \
-    img/new.png \
-    img/next.png \
-    img/pelople.png
