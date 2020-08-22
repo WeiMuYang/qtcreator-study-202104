@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-05-10T16:00:49
+# Project created by QtCreator 2020-08-11T20:42:37
 #
 #-------------------------------------------------
 
@@ -8,19 +8,15 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = samp13_2
+TARGET = testdemo18
 TEMPLATE = app
 
 
-
 SOURCES += main.cpp\
-        dialog.cpp \
-    qdicethread.cpp
+        mainwindow.cpp \
+    qwellthread.cpp
 
-HEADERS  += dialog.h \
-    qdicethread.h
+HEADERS  += mainwindow.h \
+    qwellthread.h
 
-FORMS    += dialog.ui
-
-RESOURCES += \
-    res.qrc
+FORMS    += mainwindow.ui
