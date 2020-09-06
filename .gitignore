@@ -24,4 +24,5 @@ Makefile*
 
 # 未完成 not finished
 *-nf.*
+*/-nf/
 
