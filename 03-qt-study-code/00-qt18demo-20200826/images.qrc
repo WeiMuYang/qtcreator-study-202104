@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/true.png</file>
+        <file>img/false.png</file>
+        <file>img/Off.png</file>
+        <file>img/On.png</file>
+        <file>img/bugle.png</file>
+        <file>img/pelople.png</file>
+        <file>img/error.png</file>
+        <file>img/pie30.png</file>
+        <file>img/pie60.png</file>
+        <file>img/pie100.png</file>
+        <file>img/warning.png</file>
+        <file>img/arrow.png</file>
+        <file>img/Off-NP.png</file>
+        <file>img/pie100-red.png</file>
+        <file>img/pie-NF.png</file>
+        <file>img/num.png</file>
+        <file>img/error.gif</file>
+        <file>img/true.gif</file>
+        <file>img/warning.gif</file>
+        <file>img/false.gif</file>
+        <file>img/about.png</file>
+        <file>img/copy.png</file>
+        <file>img/cut.png</file>
+        <file>img/exit.png</file>
+        <file>img/new.png</file>
+        <file>img/next.png</file>
+        <file>img/open.png</file>
+        <file>img/paste.png</file>
+        <file>img/previous.png</file>
+        <file>img/redo.png</file>
+        <file>img/save.png</file>
+        <file>img/saveAs.png</file>
+        <file>img/undo.png</file>
+    </qresource>
+</RCC>
