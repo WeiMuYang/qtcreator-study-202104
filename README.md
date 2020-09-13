@@ -12,6 +12,17 @@
 6. 对于不想更新的目录可以在末尾加上：`-ign`   
 7. 对于不想更新的文件可以在末尾加上：`-ign`    
 
+
+## linux编程   
+1. 多线程编程IPC原理及实现   
+2. 基于linux的网络编程   
+3. https://blog.csdn.net/kexuanxiu1163/article/details/105591680   
+4. 系统编程接口   
+5. 系统调用 API    
+6. 内存管理     
+7. 进程间通信（ IPC ）   
+8. https://zh.cppreference.com/w/cpp  
+
 ## [代码文件](./03-qt-study-code)   
 1. 需要保存的文件：   
 	- 工程配置文件`*.pro`   
