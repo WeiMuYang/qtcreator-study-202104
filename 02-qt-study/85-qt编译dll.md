@@ -71,6 +71,7 @@
 1. 一旦运行成功，删除Pro中添加库的语句也会运行，只是之前生成的缓存没有删除而已    
 2. 编译的过程遇到Bug，可能是兼容性问题   
 3. 也可以将一些对话框和界面封装成dll   
+4. **因为我们用的是mingw编译器，因此只能生成`*.a`库，没有得到`*.lib`，若要生成`*.lib`则需要安装配置msvc编译器**  
 
 
 
@@ -78,4 +79,5 @@
 1. https://www.cnblogs.com/findumars/p/8001358.html  
 2. https://blog.csdn.net/zhxg576/article/details/60337791   
 3. https://blog.csdn.net/cv_yuippe/article/details/39473459   
-4. 
+
+   
