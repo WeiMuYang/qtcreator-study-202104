@@ -1,27 +1,8 @@
-#include "widget.h"
-#include "ui_widget.h"
+# Qt中Tree相关的用法    
 
-Widget::Widget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Widget)
-{
-    ui->setupUi(this);
-    // 将图标信息装入QMap, 不同key()值对应不同的value(图标)
-    m_publicIconMap[TREE_ITEM_ICON_Project] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/Project.png"));
-    m_publicIconMap[TREE_ITEM_ICON_folder] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/folder.png"));
-    m_publicIconMap[TREE_ITEM_ICON_folderAnsys] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/folder-ansys.png"));
-    m_publicIconMap[TREE_ITEM_ICON_TdmsGroup] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/group.png"));
-    m_publicIconMap[TREE_ITEM_ICON_TdmsChannel] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/channel.png"));
-    m_publicIconMap[TREE_ITEM_ICON_folderOriginal] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/folder_original.png"));
-    m_publicIconMap[TREE_ITEM_ICON_DataItem] = QIcon(QStringLiteral(":/treeIcon/res_treeItemIcon/dataItem.png"));
-    initTree();
-}
+## 1 初始化树形视图   
 
-Widget::~Widget()
-{
-    delete ui;
-}
-
+```c++
 void Widget::initTree() {
     // 1. 使用QTreeView的对应模型是: QStandardItemModel，建立模型
     QStandardItemModel* model = new QStandardItemModel(ui->treeView);
@@ -79,19 +60,11 @@ void Widget::initTree() {
     // 14. 将创建的model给树形表赋值
     ui->treeView->setModel(model);
 }
+```
 
-
-void Widget::on_pushButton_clicked()
-{
-    QStandardItemModel* model = static_cast<QStandardItemModel*>(ui->treeView->model());
-    QModelIndex index = ui->treeView->currentIndex();
-    QStandardItem* item = model->itemFromIndex(index);
-
-    ui->label->setText(QStringLiteral("当前选中：%1\nrow:%2,column:%3\n最左边节点：%4").arg(item->text())
-                       .arg(index.row()).arg(index.column())
-                       .arg(index.sibling(index.row(),0).data().toString()));
-}
-
+## 2 树形视图的常用操作   
+### 2.1 查找根节点   
+```C++
 ///
 /// \brief 获取根部节点，即从属关系的可显示最上级，与invisibleRootItem不同
 /// \param item
@@ -112,8 +85,6 @@ QStandardItem* Widget::getTopParent(QStandardItem* item)
     }
     return secondItem;
 }
-
-
 ///
 /// \brief 获取父节点
 /// \param itemIndex
@@ -133,17 +104,10 @@ QModelIndex Widget::getTopParent(QModelIndex itemIndex)
     }
     return secondItem;
 }
-///
-/// \brief Widget::on_pushButton_2_clicked
-///
-void Widget::on_pushButton_2_clicked()
-{
-    QStandardItemModel* model = static_cast<QStandardItemModel*>(ui->treeView->model());
-    QModelIndex currentIndex = ui->treeView->currentIndex();
-    QStandardItem* currentItem = model->itemFromIndex(currentIndex);
-    ui->label_2->setText(getTopParent(currentItem)->text());
-}
 
+```
+### 2.2 节点点击事件   
+```c++
 ///
 /// \brief 树状视图的单击事件
 /// \param index：当前点击的节点
@@ -172,21 +136,11 @@ void Widget::on_treeView_clicked(const QModelIndex &index)
     str += QStringLiteral("顶层节点名：%1\n").arg(top);
     ui->label_realTime->setText(str);
 }
+```
 
-///
-/// \brief 可见根节点的个数
-///
-void Widget::on_pushButton_3_clicked()
-{
-    QStandardItemModel* model = static_cast<QStandardItemModel*>(ui->treeView->model());
-    ui->label_3->setText(QStringLiteral("invisibleRootItem的rowCount:%1").arg(model->invisibleRootItem()->rowCount()));
-}
+### 2.3 节点的选中事件   
 
-void Widget::on_treeWidget_clicked(const QModelIndex &index)
-{
-
-}
-
+```c++
 ///
 /// \brief 如果选中的
 /// \param item
@@ -311,72 +265,10 @@ void Widget::treeItem_CheckChildChanged(QStandardItem * item)
 }
 
 
+```
 
 
 
 
-/////
-///// \brief 判断当前项目其子项目是否全选
-///// \param item 当前项目
-///// \return
-/////
-//bool Widget::isChildAllCheck(QStandardItem * item)
-//{
-//    if(item == nullptr)
-//        return false;
-//    int rowCount = item->rowCount();
-//    for(int i=0;i<rowCount;++i)
-//    {
-//        QStandardItem* childItems = item->child(i);
-//        bool ischeck = isChildAllCheck_recursion(childItems);
-//        if(!ischeck)
-//            return false;
-//    }
-//    return true;
-//}
-//bool Widget::isChildAllCheck_recursion(QStandardItem * item)
-//{
-//    if(item == nullptr)
-//        return false;
-//    int rowCount = item->rowCount();
-//    for(int i=0;i<rowCount;++i)
-//    {
-//        QStandardItem* childItems = item->child(i);
-//        bool ischeck = isChildAllCheck_recursion(childItems);
-//        if(!ischeck)
-//            return false;
-//    }
-//    Qt::CheckState state = item->checkState();//获取当前的选择状态
-//    return ((state == Qt::Checked) ? true : false);
-//}
-
-//bool Widget::isChildAllunCheck(QStandardItem * item)
-//{
-//    if(item == nullptr)
-//        return false;
-//    int rowCount = item->rowCount();
-//    for(int i=0;i<rowCount;++i)
-//    {
-//        QStandardItem* childItems = item->child(i);
-//        bool isuncheck = isChildAllunCheck_recursion(childItems);
-//        if(!isuncheck)
-//            return false;
-//    }
-//    return true;
-//}
-
-//bool Widget::isChildAllunCheck_recursion(QStandardItem * item)
-//{
-//    if(item == nullptr)
-//        return false;
-//    int rowCount = item->rowCount();
-//    for(int i=0;i<rowCount;++i)
-//    {
-//        QStandardItem* childItems = item->child(i);
-//        bool isuncheck = isChildAllunCheck_recursion(childItems);
-//        if(!isuncheck)
-//            return false;
-//    }
-//    Qt::CheckState state = item->checkState();//获取当前的选择状态
-//    return ((state == Qt::Unchecked) ? true : false);
-//}
+## 3 参考资料  
+1. https://blog.csdn.net/czyt1988/article/details/18996407    
