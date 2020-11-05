@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    showmsg.cpp
+    showmsg.cpp \
+    ioctrl.cpp
 
 HEADERS  += widget.h \
-    showmsg.h
+    showmsg.h \
+    ioctrl.h
 
 FORMS    += widget.ui
