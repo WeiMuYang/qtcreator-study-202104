@@ -2,15 +2,39 @@
 #define SIMPLETCPSOCKETCLIENTDEMO_H
 
 #include <QObject>
+#include <QAbstractSocket>
+#include <QRunnable>
+#include <QThreadPool>
 
-class SimpleTcpSocketClientDemo : public QObject
+class QTcpSocket;
+
+/**
+ * @brief TCP客户端的类
+ */
+class SimpleTcpSocketClient : public QObject
 {
     Q_OBJECT
 public:
-    explicit SimpleTcpSocketClientDemo(QObject *parent = nullptr);
+    explicit SimpleTcpSocketClient(QObject *parent = nullptr);
 
-signals:
+public slots:
+    void connected();
+    void readyRead();
+    void error(QAbstractSocket::SocketError socketError);
+
+private:
+    QTcpSocket* m_pTcpSocket;
 
 };
+
+/**
+ * @brief 客户端线程
+ */
+class ClientRunnable : public QRunnable
+{
+public:
+    void run();
+};
+
 
 #endif // SIMPLETCPSOCKETCLIENTDEMO_H

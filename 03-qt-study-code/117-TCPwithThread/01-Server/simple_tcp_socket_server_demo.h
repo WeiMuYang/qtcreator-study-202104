@@ -3,14 +3,27 @@
 
 #include <QObject>
 
-class SimpleTcpSocketServerDemo : public QObject
+//
+//tcp服务端-单线程处理客户端连接
+#include <QAbstractSocket>
+
+
+class QTcpServer;
+class SimpleTcpSocketServer : public QObject
 {
     Q_OBJECT
+
 public:
-    explicit SimpleTcpSocketServerDemo(QObject *parent = nullptr);
+    SimpleTcpSocketServer(QObject *parent = 0);
 
-signals:
+public slots:
+    void sendData();
+    void displayError(QAbstractSocket::SocketError socketError);
 
+private:
+    QStringList m_oData;
+    QTcpServer *m_pTcpServer;
 };
+
 
 #endif // SIMPLETCPSOCKETSERVERDEMO_H

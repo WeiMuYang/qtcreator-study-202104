@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    simple_tcp_socket_client_demo.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    simple_tcp_socket_client_demo.h
 
 FORMS += \
     mainwindow.ui

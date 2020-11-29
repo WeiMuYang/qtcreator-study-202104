@@ -7,7 +7,7 @@
 
 
 typedef enum {
-    kClose = 0, kOpen = 1, kPwdTxt = 2, kOSTxt = 3, kAllElemTxt = 4
+    kClose = 0, kOpen = 1, kPwdTxt = 2, kOSTxt = 3, kAllElemTxt = 4, test = 5
 } ScreenCMD;
 
 

@@ -1,5 +1,7 @@
 ﻿#include "ctrl_screen.h"
 #include <QDebug>
+#include <QEventLoop>
+#include <QTimer>
 
 /**
  * @file        ctrl_screen.cpp
@@ -14,12 +16,12 @@
 CtrlScreen::CtrlScreen(QObject *parent) : QObject(parent) {
     m_pSerial_COMPort = new QSerialPort;    // 获取对象
     serialPortScan();                       // 端口名
-    m_baudRate = QSerialPort::Baud57600;    // 波特率
+    m_baudRate = QSerialPort::Baud9600;     // 波特率
     m_dataBit = QSerialPort::Data8;         // 数据位数
     m_parity = QSerialPort::NoParity;       // 奇偶校验
     m_stopBits = QSerialPort::OneStop;      // 停止位
     m_flowContrl = QSerialPort::NoFlowControl;//流控制
-    m_qn64_bufferSize = 1024;               // 缓冲区大小
+    m_qn64_bufferSize = 2048;               // 缓冲区大小
 }
 
 
@@ -59,9 +61,10 @@ bool CtrlScreen::serialOpen() {
     m_pSerial_COMPort->setFlowControl(m_flowContrl);
     m_pSerial_COMPort->setReadBufferSize(m_qn64_bufferSize);
     /* 打开串口 */
-    if(m_pSerial_COMPort->open(QIODevice::ReadWrite)==true)
+    if(m_pSerial_COMPort->open(QIODevice::ReadWrite))
     {
-        QObject::connect(m_pSerial_COMPort, SIGNAL(QSerialPort::readyRead()), this, SLOT(serialRecvMsgEvent()));
+        // 这种方式在信号前不要加类名::  容易出错
+        connect(m_pSerial_COMPort, SIGNAL(readyRead()), this, SLOT(serialRecvMsgEvent()));
         return true;
     }else{
         qDebug() << tr("serialOpen : Serial Port Init Error!");
@@ -77,7 +80,7 @@ void CtrlScreen::serialRecvMsgEvent() {
     if(m_pSerial_COMPort->bytesAvailable() >= 0) {
         QByteArray buffer = m_pSerial_COMPort->readAll();
         if(!buffer.isEmpty())
-            qDebug() << QString(buffer);
+            qDebug() << buffer.toHex();
         else
             qDebug()<< "CtrlScreen::serialRecvMsgEvent Data ERROR!";
     }else
@@ -95,31 +98,81 @@ void CtrlScreen::slotScreenCMD(ScreenCMD cmd, QString txt) {
     QString str;
     switch (cmd) {
     case kClose:
-        str = "page page0;";
+        str = "page 0";
+        slotSendCMDtoScreen(str);
         break;
     case kOpen:
-        str =  "page page0;                 delay 500;                \
-                page page1;                 fill 20,20,380,5,GREEN;   \
-        fill 20,20,5,190,GREEN;     fill 20,207,380,5,GREEN;  \
-        fill 395,20,5,190,GREEN;    delay 400;                \
-        page page2;                 pwdTxt.txt = \"00000000h\";    \
-        osTxt.txt = \"03C00000h\";  allEleTxt.txt = \"00000100h\";";
+    {
+        str =  "page page0";
+        slotSendCMDtoScreen(str);
+        QEventLoop eventloop;
+        QTimer::singleShot(500, &eventloop, SLOT(quit()));
+        eventloop.exec();
+        str = "page page1";
+        slotSendCMDtoScreen(str);
+        str = "fill 20,20,380,5,GREEN";
+        slotSendCMDtoScreen(str);
+        str = "fill 20,20,5,190,GREEN";
+        slotSendCMDtoScreen(str);
+        str = "fill 20,207,380,5,GREEN";
+        slotSendCMDtoScreen(str);
+        str = "fill 395,20,5,190,GREEN";
+        slotSendCMDtoScreen(str);
+
+        QEventLoop eventloop1;
+        QTimer::singleShot(500, &eventloop1, SLOT(quit()));
+        eventloop1.exec();
+
+        str = "page page2";
+        slotSendCMDtoScreen(str);
+        str = "pwdTxt.txt = \"00000000h\"";
+        slotSendCMDtoScreen(str);
+        str = "osTxt.txt = \"03C00000h\"";
+        slotSendCMDtoScreen(str);
+        str = "allEleTxt.txt = \"00000100h\"";
+        slotSendCMDtoScreen(str);
+
+        QEventLoop eventloop2;
+        QTimer::singleShot(200, &eventloop2, SLOT(quit()));
+        eventloop2.exec();
+        str = "page page0";
+        slotSendCMDtoScreen(str);
+        QEventLoop eventloop3;
+        QTimer::singleShot(200, &eventloop3, SLOT(quit()));
+        eventloop3.exec();
+
+        str = "page page2";
+        slotSendCMDtoScreen(str);
+        str = "pwdTxt.txt = \"00000000h\"";
+        slotSendCMDtoScreen(str);
+        str = "osTxt.txt = \"03C00000h\"";
+        slotSendCMDtoScreen(str);
+        str = "allEleTxt.txt = \"00000100h\"";
+        slotSendCMDtoScreen(str);
+    }
         break;
     case kPwdTxt:
         str = "pwdTxt.txt = \"" + txt + "\"";
+        slotSendCMDtoScreen(str);
         break;
     case kOSTxt:
         str = "osTxt.txt = \"" + txt + "\"";
+        slotSendCMDtoScreen(str);
         break;
     case kAllElemTxt:
         str = "allEleTxt.txt = \"" + txt + "\"";
+        slotSendCMDtoScreen(str);
+        break;
+    case test:
+        str = "fill 20,20,380,5,GREEN";
+        slotSendCMDtoScreen(str);
         break;
     default:
         qDebug() << "CtrlScreen::slotScreenCMD CMD ERROR!" ;
         return ;
         break;
     }
-    slotSendCMDtoScreen(str);
+
 }
 
 

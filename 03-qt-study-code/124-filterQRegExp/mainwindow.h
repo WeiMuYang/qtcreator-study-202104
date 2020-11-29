@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QRegularExpression>
+#include <QRegExpValidator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

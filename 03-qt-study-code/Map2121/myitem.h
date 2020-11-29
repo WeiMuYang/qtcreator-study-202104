@@ -2,12 +2,19 @@
 #define MYITEM_H
 
 #include <QObject>
+#include <QGraphicsItem>
+#include <QPainter>
+#include <QGraphicsItem>
 
-class MyItem : public QObject
+class MyItem : public QGraphicsItem
 {
-    Q_OBJECT
+
 public:
-    explicit MyItem(QObject *parent = 0);
+      MyItem( );
+
+    QRectF boundingRect() const;
+
+    void paint(QPainter *painter,const QStyleOptionGraphicsItem *option,QWidget *widget);
 
 signals:
 
