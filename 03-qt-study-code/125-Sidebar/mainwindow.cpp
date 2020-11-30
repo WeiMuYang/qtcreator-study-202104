@@ -1,20 +1,38 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QtSvg>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QListWidget * right = new QListWidget();
-    for ( int i=98; i<103; i++) {
-        QListWidgetItem * item = new QListWidgetItem;
-        item->setData(Qt::DisplayRole, i);
-        right->addItem(item);
-    }
 
-    ui->listWidget->addItem(new QListWidgetItem(QIcon(QObject::tr(":/icons/alarm-fill.svg")), QObject::tr("1-jkldsjf")));
+    QString strPath = ":/icons/app-indicator.svg";
+    QSvgRenderer* svgRender = new QSvgRenderer();
+    svgRender->load(strPath);
+
+    QPixmap* pixmap = new QPixmap(32,32);
+    pixmap->fill(Qt::transparent);//设置背景透明
+    pixmap->createMaskFromColor(Qt::black);
+    QPainter pix(pixmap);
+    svgRender->render(&pix);
+
+
+
+
+
+
+    QIcon icon(*pixmap);
+
+
+
+
+
+
+    ui->listWidget->addItem(new QListWidgetItem(icon, QObject::tr("1-jkldsjf")));
     ui->listWidget->addItem(new QListWidgetItem(QIcon(QObject::tr(":/icons/app-indicator.svg")), QObject::tr("2-adadsfadf")));
     ui->listWidget->addItem(new QListWidgetItem(QIcon(QObject::tr(":/icons/arrow-down-left-square.svg")), QObject::tr("3-JLKJKLJK")));
     ui->listWidget->addItem(new QListWidgetItem(QIcon(QObject::tr(":/icons/arrow-bar-left.svg")), QObject::tr("4-KL;EKJ")));
@@ -25,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent)
     newItem->setSizeHint(QSize(this->width(),25));//设置宽度、高度
     ui->listWidget->addItem(newItem);
     newItem->setHidden(true);
-    newItem->setBackground(QColor(252,240,0));
+
 
 
 
