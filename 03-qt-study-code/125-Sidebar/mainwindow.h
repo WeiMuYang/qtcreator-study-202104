@@ -15,6 +15,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void changeItem(QString );
+
+
 private:
     Ui::MainWindow *ui;
 };
